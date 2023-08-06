@@ -1,0 +1,15 @@
+# Build and Release Folders
+build
+dll
+node_modules
+.idea
+
+# Other files and folders
+.settings/
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+

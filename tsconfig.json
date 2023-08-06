@@ -1,0 +1,29 @@
+{
+  "compilerOptions": { // 指定TypeScript编译器的配置和选项
+    "module": "ES2015", // 指定模块化的格式为ES2015（ES6），使用import和export来导入和导出模块
+    "target": "ES2015", // 指定编译后的目标JavaScript版本为ES2015
+    "allowJs": true, // 允许在项目中包含JavaScript文件
+    "removeComments": false, // 保留编译后的JavaScript代码中的注释
+    "noImplicitAny": false, // 不允许不明确指定类型的表达式的隐士any类型
+    "strictNullChecks": true, // 启动严格的null检查
+    "noEmit": true, // 不生成输出文件
+    "jsx": "react", // 指定JSX的处理方式为React
+    "sourceMap": true, // 生成对应的source map文件，方便调试时追踪到TypeScript源代码
+    "esModuleInterop": true, // 允许以ES模块的方式导入CommonJS模块
+    "moduleResolution": "node", // 指定模块解析方式为Node风格的解析
+    "allowSyntheticDefaultImports": true, // 允许从没有默认导出的模块中默认导入
+    "lib": ["es2022", "dom", "dom.iterable"], // 指定代码中可以使用的库
+    "paths": { // 和webpack中的resolve.alias作用类似，指定路径别名，可以防止ts路径检查报错
+      "@src/*": ["./src/*"],
+      "@asset/*": ["./src/asset/*"],
+      "@components/*": ["./src/components/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@common/*": ["./src/common/*"],
+      "@language/*": ["./src/language/*"],
+      "@redux/*": ["./src/redux/*"],
+      "@router/*": ["./src/router/*"]
+    }
+  },
+  "include": ["src/**/*"], // 检测包含的文件
+  "exclude": ["node_modules", "build"] // 检测排除的文件
+}
